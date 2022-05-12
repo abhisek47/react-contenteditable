@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import { FiImage } from 'react-icons/fi'
+import { CgInsertBeforeR } from 'react-icons/cg'
 import TextareaAutosize from 'react-textarea-autosize'
 import GifModal from './GifModal'
 
@@ -80,13 +81,20 @@ const Editor = () => {
             value={item.message}
             placeholder='Empty tweets..'
           />
-          <div className='flex gap-2 items-center justify-end mt-2'>
+          <div className='flex gap-3 items-center justify-end mt-2'>
             <div
-              className={`font-bold ${
+              className={`font-bold mr-2 ${
                 item.count > limit ? 'text-red-500' : 'text-gray-500'
               }`}
             >
               {item.count} / {limit}
+            </div>
+            <div>
+              <CgInsertBeforeR
+                className='text-blue-500/75'
+                size={22}
+                onClick={handleNodeSubmit}
+              />
             </div>
             <div>
               <GifModal onGifSelect={onGifSelect} index={index} />
