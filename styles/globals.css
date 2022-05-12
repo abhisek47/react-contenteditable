@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Mukta', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +19,34 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid lightgray;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+label input[type='file'] {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 8px;
+  left: 6px;
+  margin: 10px auto;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
 }
