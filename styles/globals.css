@@ -25,7 +25,8 @@ textarea {
   width: 100%;
   margin: 0 auto;
   padding: 0.5rem 0;
-  border-bottom: 1px solid lightgray;
+  border: 0;
+  resize: auto;
 }
 
 textarea:focus {
@@ -49,4 +50,14 @@ label {
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+}
+
+.ProseMirror {
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.ProseMirror:focus {
+  outline: none;
 }
